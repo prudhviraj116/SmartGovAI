@@ -119,7 +119,7 @@ Your frontend runs at → http://localhost:3000
 
 In /frontend/src/services/api.js, update your deployed backend URL:
 
-const API_BASE = "https://smartgovai-backend-<your-id>.asia-south1.run.app";
+const API_BASE = "(https://smartgovai-backend-37023038191.asia-south1.run.app/)";
 
 ☁️ Deployment Guide
 🚀 Backend (Google Cloud Run)
