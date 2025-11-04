@@ -1,0 +1,101 @@
+district,incident_type,reported_cases,resolved_cases,severity,date
+Pune,Fire,3,2,Medium,2025-10-25
+Mumbai,Traffic Accident,15,12,High,2025-10-25
+Nagpur,Theft,10,8,Low,2025-10-25
+Nashik,Power Outage,5,5,Medium,2025-10-25
+Aurangabad,Flood,8,6,High,2025-10-25
+Thane,Cyber Crime,6,4,Medium,2025-10-26
+Solapur,Assault,7,6,High,2025-10-26
+Kolhapur,Theft,4,3,Low,2025-10-26
+Pune,Gas Leak,2,2,Medium,2025-10-26
+Mumbai,Fire,12,10,High,2025-10-26
+Nagpur,Murder,1,1,High,2025-10-26
+Aurangabad,Traffic Accident,9,7,Medium,2025-10-26
+Nashik,Flood,6,5,High,2025-10-26
+Thane,Building Collapse,2,1,High,2025-10-26
+Solapur,Theft,8,6,Low,2025-10-26
+Kolhapur,Cyber Crime,3,2,Medium,2025-10-26
+Pune,Medical Emergency,14,12,Medium,2025-10-27
+Mumbai,Power Outage,20,18,Low,2025-10-27
+Nagpur,Riot,2,1,High,2025-10-27
+Aurangabad,Domestic Violence,4,3,Medium,2025-10-27
+Nashik,Fire,10,9,Medium,2025-10-27
+Thane,Car Theft,7,5,Low,2025-10-27
+Solapur,Missing Person,3,2,Medium,2025-10-27
+Kolhapur,Drug Possession,5,5,Low,2025-10-27
+Pune,Traffic Accident,11,10,High,2025-10-28
+Mumbai,Gas Leak,6,6,Medium,2025-10-28
+Nagpur,Power Outage,14,13,Low,2025-10-28
+Aurangabad,Homicide,1,1,High,2025-10-28
+Nashik,Public Disorder,3,3,Medium,2025-10-28
+Thane,Medical Emergency,16,15,High,2025-10-28
+Solapur,Fire,4,3,Medium,2025-10-28
+Kolhapur,Road Blockage,6,5,Low,2025-10-28
+Pune,Flood,2,2,High,2025-10-29
+Mumbai,Cyber Fraud,12,9,Medium,2025-10-29
+Nagpur,Assault,7,5,High,2025-10-29
+Aurangabad,Traffic Accident,10,8,Medium,2025-10-29
+Nashik,Gas Leak,2,1,High,2025-10-29
+Thane,Law Violation,5,4,Low,2025-10-29
+Solapur,Theft,11,10,Low,2025-10-29
+Kolhapur,Fire,2,2,Medium,2025-10-29
+Pune,Drug Offense,3,2,Medium,2025-10-30
+Mumbai,Building Collapse,1,0,High,2025-10-30
+Nagpur,Medical Emergency,9,8,Medium,2025-10-30
+Aurangabad,Domestic Dispute,4,3,Low,2025-10-30
+Nashik,Riot,2,1,High,2025-10-30
+Thane,Power Outage,15,14,Low,2025-10-30
+Solapur,Water Leakage,5,5,Low,2025-10-30
+Kolhapur,Cyber Crime,6,6,Medium,2025-10-30
+Pune,Traffic Accident,13,11,High,2025-10-30
+Mumbai,Fire,9,7,High,2025-10-30
+Nagpur,Public Disorder,5,4,Medium,2025-10-30
+Aurangabad,Gas Leak,3,2,Medium,2025-10-30
+Nashik,Drug Possession,2,2,Low,2025-10-30
+Thane,Assault,5,4,Medium,2025-10-30
+Solapur,Robbery,7,6,High,2025-10-30
+Kolhapur,Attempted Murder,1,1,High,2025-10-30
+Pune,Power Outage,8,8,Low,2025-10-30
+Mumbai,Cyber Scam,10,9,Medium,2025-10-30
+Nagpur,Theft,6,5,Low,2025-10-30
+Aurangabad,Water Contamination,3,3,Medium,2025-10-30
+Nashik,Illegal Construction,2,2,Low,2025-10-30
+Thane,Bridge Crack,1,1,High,2025-10-30
+Solapur,Vehicle Fire,3,2,High,2025-10-30
+Kolhapur,Domestic Violence,2,2,Low,2025-10-30
+Pune,Public Altercation,4,4,Medium,2025-10-30
+Mumbai,Assault,11,9,High,2025-10-30
+Nagpur,Fire,5,4,High,2025-10-30
+Aurangabad,Theft,8,7,Low,2025-10-30
+Nashik,Medical Emergency,12,11,Medium,2025-10-30
+Thane,Traffic Accident,20,18,High,2025-10-30
+Solapur,Cyber Fraud,9,8,Medium,2025-10-30
+Kolhapur,Drug Offense,3,3,Low,2025-10-30
+Pune,Riot,2,1,High,2025-10-30
+Mumbai,Power Outage,16,16,Low,2025-10-30
+Nagpur,Flood,4,3,High,2025-10-30
+Aurangabad,Fire,6,5,Medium,2025-10-30
+Nashik,Gas Leak,3,3,Medium,2025-10-30
+Thane,Domestic Dispute,4,4,Low,2025-10-30
+Solapur,Missing Person,2,2,Medium,2025-10-30
+Kolhapur,Medical Emergency,4,4,Medium,2025-10-30
+Pune,Flood,3,2,High,2025-10-30
+Mumbai,Robbery,5,5,Medium,2025-10-30
+Nagpur,Power Outage,7,7,Low,2025-10-30
+Aurangabad,Theft,6,5,Low,2025-10-30
+Nashik,Traffic Accident,8,7,High,2025-10-30
+Thane,Law Violation,3,2,Low,2025-10-30
+Solapur,Assault,5,4,High,2025-10-30
+Kolhapur,Fire,2,2,Medium,2025-10-30
+Pune,Cyber Crime,4,3,Medium,2025-10-30
+Mumbai,Medical Emergency,14,12,Medium,2025-10-30
+Nagpur,Drug Possession,3,3,Low,2025-10-30
+Aurangabad,Public Disorder,5,4,Medium,2025-10-30
+Nashik,Building Collapse,1,1,High,2025-10-30
+Thane,Power Outage,10,9,Low,2025-10-30
+Solapur,Theft,7,6,Low,2025-10-30
+Kolhapur,Traffic Accident,4,4,High,2025-10-30
+Pune,Fire,6,5,Medium,2025-10-30
+Mumbai,Cyber Scam,8,7,Medium,2025-10-30
+Nagpur,Medical Emergency,11,10,Medium,2025-10-30
+Aurangabad,Gas Leak,2,2,Medium,2025-10-30

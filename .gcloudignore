@@ -1,0 +1,22 @@
+# Ignore local environments and junk
+venv/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.log
+node_modules/
+.git/
+.gitignore
+.DS_Store
+.idea/
+.vscode/
+*.zip
+*.tar.gz
+*.tgz
+
+# Do not ignore Dockerfile or requirements.txt
+!Dockerfile
+!requirements.txt

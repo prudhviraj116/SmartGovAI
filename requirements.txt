@@ -1,0 +1,16 @@
+streamlit
+pandas
+plotly
+matplotlib
+vertexai
+scikit-learn
+openai
+google-cloud-aiplatform
+numpy
+python-dotenv
+geopandas
+fuzzywuzzy
+python-Levenshtein
+fastapi
+uvicorn
+python-multipart

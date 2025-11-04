@@ -1,0 +1,101 @@
+district,hospital_name,patients_treated,critical_cases,reported_outbreaks,date
+Pune,Civil Hospital,120,10,2,2025-10-25
+Mumbai,JJ Hospital,350,25,1,2025-10-25
+Nagpur,AIIMS,220,15,3,2025-10-25
+Nashik,Government Medical College,180,12,2,2025-10-25
+Aurangabad,Civil Hospital,200,14,1,2025-10-25
+Thane,Thane Civil Hospital,260,18,0,2025-10-25
+Kolhapur,Chhatrapati Pramila Raje Hospital,140,11,1,2025-10-25
+Solapur,Solapur General Hospital,190,9,0,2025-10-25
+Nagpur,Orange City Hospital,170,8,1,2025-10-26
+Pune,Ruby Hall Clinic,310,20,2,2025-10-26
+Mumbai,KEM Hospital,400,27,1,2025-10-26
+Mumbai,Lokmanya Tilak Hospital,280,16,2,2025-10-26
+Nashik,Wockhardt Hospital,210,10,0,2025-10-26
+Aurangabad,MGM Medical College,230,13,0,2025-10-26
+Thane,Hiranandani Hospital,250,19,0,2025-10-26
+Kolhapur,Apollo Hospital,180,12,1,2025-10-27
+Solapur,Dr. Patil Memorial Hospital,130,6,0,2025-10-27
+Pune,Sassoon General Hospital,450,30,3,2025-10-27
+Nagpur,Kingsway Hospital,240,20,2,2025-10-27
+Mumbai,Global Hospital,360,23,1,2025-10-27
+Nashik,Sahyadri Hospital,200,8,0,2025-10-27
+Aurangabad,Omega Hospital,190,7,0,2025-10-27
+Thane,Fortis Hospital,310,22,1,2025-10-27
+Kolhapur,Star Hospital,150,5,1,2025-10-28
+Solapur,Yashoda Hospital,180,9,0,2025-10-28
+Pune,Deenanath Mangeshkar Hospital,390,28,1,2025-10-28
+Nagpur,Getwell Hospital,260,18,2,2025-10-28
+Mumbai,HN Reliance Hospital,410,31,1,2025-10-28
+Nashik,Suyash Hospital,170,6,0,2025-10-28
+Aurangabad,Gokhale Hospital,220,12,1,2025-10-28
+Thane,Bethany Hospital,240,14,0,2025-10-28
+Kolhapur,DYP Hospital,120,4,0,2025-10-29
+Solapur,Navjeevan Hospital,140,7,1,2025-10-29
+Pune,Noble Hospital,300,18,1,2025-10-29
+Nagpur,Care Hospital,210,15,1,2025-10-29
+Mumbai,Nanavati Hospital,370,25,2,2025-10-29
+Nashik,Sigma Hospital,195,10,0,2025-10-29
+Aurangabad,LifeCare Hospital,180,9,0,2025-10-29
+Thane,Jupiter Hospital,290,16,1,2025-10-29
+Kolhapur,Sanjeevan Hospital,130,5,0,2025-10-30
+Solapur,Metro Hospital,150,8,0,2025-10-30
+Pune,Aditya Birla Hospital,320,21,2,2025-10-30
+Nagpur,Liberty Hospital,230,13,1,2025-10-30
+Mumbai,Breach Candy Hospital,420,33,1,2025-10-30
+Nashik,Miracle Hospital,210,12,0,2025-10-30
+Aurangabad,Global Care Hospital,200,14,0,2025-10-30
+Thane,Reliance Hospital,300,20,1,2025-10-30
+Kolhapur,Vinayak Hospital,160,6,1,2025-10-31
+Solapur,City Hospital,170,9,0,2025-10-31
+Pune,Columbia Asia Hospital,340,22,1,2025-10-31
+Nagpur,Wellness Hospital,250,17,2,2025-10-31
+Mumbai,Seven Hills Hospital,380,28,1,2025-10-31
+Nashik,Anand Hospital,220,11,0,2025-10-31
+Aurangabad,Sunrise Hospital,210,10,0,2025-10-31
+Thane,Medanta Hospital,320,19,1,2025-10-31
+Kolhapur,Shree Hospital,140,7,1,2025-11-01
+Solapur,Healing Touch Hospital,160,8,0,2025-11-01
+Pune,Hiranandani Hospital,360,24,2,2025-11-01
+Nagpur,City Care Hospital,220,14,1,2025-11-01
+Mumbai,Fortis Escorts Hospital,400,30,1,2025-11-01
+Nashik,Vinayak Hospital,200,9,0,2025-11-01
+Aurangabad,Carewell Hospital,190,8,0,2025-11-01
+Thane,Sunshine Hospital,280,15,1,2025-11-01
+Kolhapur,Divine Hospital,150,6,0,2025-11-02
+Solapur,Pristine Hospital,180,10,1,2025-11-02
+Pune,Max Hospital,330,23,1,2025-11-02
+Nagpur,Healing Hands Hospital,240,16,2,2025-11-02
+Mumbai,Saifee Hospital,390,29,1,2025-11-02
+Nashik,Citycare Hospital,210,11,0,2025-11-02
+Aurangabad,Wellcare Hospital,200,12,0,2025-11-
+02
+Thane,Crystal Hospital,310,18,1,2025-11-02
+Kolhapur,Hope Hospital,130,5,0,2025-11-03
+Solapur,Trinity Hospital,160,7,0,2025-11-03
+Pune,Breach Candy Clinic,350,26,2,2025-11-03
+Nagpur,Sunflower Hospital,230,15,1,2025-11-03
+Mumbai,Lilavati Hospital,410,32,1,2025-11-03
+Nashik,Healing Touch Clinic,190,8,0,2025-11-
+03
+Aurangabad,Divine Care Hospital,210,11,1,2025-11-03
+Thane,Evercare Hospital,290,17,0,2025-11-03
+Kolhapur,Wellness Clinic,140,6,1,2025-11-04
+Solapur,Healthfirst Hospital,170,9,0,2025-11-04
+Pune,Global Hospital,380,27,1,2025-11-04
+Nagpur,City Hospital,250,18,2,2025-11-04
+Mumbai,Asian Heart Institute,420,34,1,2025-11-04
+Nashik,Prime Hospital,220,12,0,2025-11-04
+Aurangabad,Sunshine Care Hospital,200,10,0,2025-11-04
+Thane,Medicare Hospital,300,19,1,2025-11-04
+Kolhapur,Healing Hands Clinic,150,7,0,2025-11-05
+Solapur,Wellcare Hospital,160,8,1,2025-11-05
+Pune,Fortis Hospital,360,25,2,2025-11-05
+Nagpur,Liberty Care Hospital,240,16,1,2025-11-
+05
+Mumbai,Care Hospital,400,31,1,2025-11-05
+Nashik,Citycare Clinic,210,10,0,2025-11-05
+Aurangabad,Healthfirst Clinic,190,9,0,2025-11-05
+Thane,Crystal Care Hospital,280,15,1,2025-11-05 
+Kolhapur,Prime Care Hospital,130,5,0,2025-11-06
+Solapur,Sunflower Clinic,150,7,0,2025-11-06

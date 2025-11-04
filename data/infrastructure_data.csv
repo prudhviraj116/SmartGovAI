@@ -1,0 +1,103 @@
+district,project_name,status,budget_spent,total_budget,deadline
+Pune,Water Pipeline,In Progress,4.5,6.0,2025-12-31
+Mumbai,Metro Line 3,Delayed,15.0,20.0,2026-06-30
+Nagpur,Smart Roads,Completed,8.0,8.0,2025-09-15
+Aurangabad,City Sewage Upgrade,In Progress,5.2,7.0,2026-03-30
+Nashik,Flood Control Barrage,Completed,10.0,10.0,2025-10-30
+Thane,Urban Tree Plantation,In Progress,2.5,4.0,2026-02-28
+Solapur,Highway Expansion,Delayed,6.8,9.0,2026-09-15
+Kolhapur,Medical College Building,In Progress,3.4,5.0,2025-12-10
+Pune,Public Wifi Project,Completed,1.2,1.2,2025-06-15
+Mumbai,Coastal Road,In Progress,28.5,32.0,2026-11-20
+Nagpur,AI Research Hub,In Progress,12.0,15.0,2026-05-31
+Aurangabad,Renewable Power Plant,Delayed,6.0,9.0,2026-08-10
+Nashik,LED Streetlights,Completed,0.9,0.9,2025-05-01
+Thane,Water Recycling Project,In Progress,4.4,5.5,2026-01-15
+Solapur,Ring Road Phase 2,In Progress,7.2,10.0,2026-07-20
+Kolhapur,Rural Water Supply,Completed,2.1,2.1,2025-08-01
+Pune,City Smart Parking,In Progress,3.0,4.5,2026-02-10
+Mumbai,Flood Drain Tunnel,Delayed,14.0,18.0,2026-10-30
+Nagpur,Airport Expansion,In Progress,9.7,12.0,2026-04-15
+Aurangabad,Skill Development Center,Completed,5.0,5.0,2025-09-30
+Nashik,New Flyover,In Progress,6.3,9.0,2026-06-15
+Thane,Hospital Renovation,Delayed,3.8,5.5,2026-12-20
+Solapur,Bus Depot Construction,In Progress,2.0,3.0,2025-11-15
+Kolhapur,Heritage Site Restoration,Completed,1.8,1.8,2025-07-10
+Pune,Underground Cable Project,In Progress,2.7,3.5,2026-03-05
+Mumbai,Harbour Link,Delayed,20.0,25.0,2027-04-15
+Nagpur,Electric Bus Network,In Progress,8.5,10.0,2026-10-05
+Aurangabad,Drainage Modernization,In Progress,4.0,6.0,2026-04-25
+Nashik,Public Market Complex,Completed,2.2,2.2,2025-11-01
+Thane,Smart Traffic System,In Progress,3.5,5.0,2026-02-15
+Solapur,Renewable Microgrid,Delayed,1.6,3.0,2026-05-20
+Kolhapur,Solar Water Pumps,Completed,0.8,0.8,2025-06-30
+Pune,City Housing Phase II,In Progress,5.0,7.0,2026-05-25
+Mumbai,Metro Line 4,In Progress,17.0,22.0,2027-01-15
+Nagpur,Green Zone Development,Completed,1.3,1.3,2025-04-20
+Aurangabad,Airport Cargo Terminal,In Progress,5.9,8.0,2026-09-30
+Nashik,Disaster Preparedness Hub,Delayed,3.5,5.5,2026-07-30
+Thane,IT Park Extension,In Progress,9.0,11.0,2026-12-10
+Solapur,Public Library,Completed,1.0,1.0,2025-03-30
+Kolhapur,Agri Market Yard,In Progress,2.5,3.5,2026-01-20
+Pune,Smart Metering Phase I,Delayed,4.2,7.0,2026-09-10
+Mumbai,Suburban Water Supply,In Progress,12.4,15.0,2026-06-25
+Nagpur,Industrial Corridor,In Progress,18.0,22.0,2026-11-05
+Aurangabad,Hospital Tower Project,Delayed,7.3,10.0,2026-08-25
+Nashik,Bus Rapid Transit,Completed,6.0,6.0,2025-09-01
+Thane,Seaside Beautification,In Progress,3.0,4.0,2026-01-05
+Solapur,New City Hall,In Progress,1.9,2.5,2025-10-20
+Kolhapur,River Cleaning Drive,Completed,2.0,2.0,2025-08-15
+Pune,Industrial Water Channel,In Progress,3.3,5.0,2026-02-28
+Mumbai,Underground Metro Phase II,Delayed,25.0,30.0,2027-06-30
+Nagpur,Low-cost Housing Phase III,In Progress,9.0,11.5,2026-12-01
+Aurangabad,High-efficiency Power Lines,In Progress,6.6,8.0,2026-05-10
+Nashik,Cultural Center,Completed,3.4,3.4,2025-07-01
+Thane,Bridge Expansion Project,In Progress,5.0,6.5,2026-02-05
+Solapur,Drinking Water Network,Delayed,4.2,6.0,2026-09-15
+Kolhapur,Public Toilet Network,Completed,0.7,0.7,2025-05-10
+Pune,Digital Record System,In Progress,2.0,2.8,2026-01-15
+Mumbai,Harbour Infrastructure Upgrade,In Progress,15.6,20.0,2026-12-10
+Nagpur,Smart Lighting Project,Completed,1.5,1.5,2025-04-25
+Aurangabad,Resettlement Housing,In Progress,8.8,10.0,2026-03-25
+Nashik,Airport Terminal Upgrade,Delayed,5.0,7.5,2026-11-20
+Thane,Civic Cybersecurity Setup,In Progress,3.2,4.0,2026-05-15
+Solapur,Urban Water Drainage,In Progress,5.4,7.5,2026-10-31
+Kolhapur,School Building Repairs,Completed,0.9,0.9,2025-06-05
+Pune,Metro Feeder Service,In Progress,3.9,5.0,2026-03-20
+Mumbai,Stormwater Pump Station,Delayed,9.8,12.5,2026-08-25
+Nagpur,Rural Connectivity Roads,In Progress,6.0,9.0,2026-06-30
+Aurangabad,Medical Research Center,Completed,7.0,7.0,2025-09-05
+Nashik,Temple Heritage Renewal,In Progress,2.6,3.5,2026-01-10
+Thane,Electric Substation Upgrade,Delayed,4.0,6.0,2026-09-30
+Solapur,Water Treatment Plant,In Progress,8.5,10.0,2026-12-15
+Kolhapur,Solar Park Expansion,Completed,5.0,5.0,2025-10-01
+Pune,Mass Transit Terminals,In Progress,18.0,22.0,2026-08-20
+Mumbai,Slum Rehabilitation Phase 2,Delayed,13.0,17.0,2026-06-15
+Nagpur,Education Infrastructure Drive,Completed,4.0,4.0,2025-08-25
+Aurangabad,Silk Cluster Development,In Progress,3.5,5.0,2026-02-25
+Nashik,Logistics Park,In Progress,11.2,14.0,2026-10-15
+Thane,Police Housing Quarters,Completed,6.0,6.0,2025-07-20
+Solapur,Community Hall Construction,In Progress,2.7,3.5,2026-01-30
+Kolhapur,Smart Waste Management,Delayed,4.8,6.0,2026-07-05
+Pune,Rural Road Maintenance,Completed,2.0,2.0,2025-09-18
+Mumbai,Water Desalination Plant,In Progress,19.0,23.0,2026-12-25
+Nagpur,Green Bus Terminals,In Progress,7.3,9.0,2026-03-28
+Aurangabad,Science Park Development,Completed,4.5,4.5,2025-06-10
+Nashik,Digital Payment Hub,Delayed,1.9,3.5,2026-07-25
+Thane,Housing Phase III,In Progress,8.5,11.0,2026-09-12
+Solapur,Riverfront Promenade,In Progress,6.6,8.0,2026-08-05
+Kolhapur,Rural Healthcare Units,Completed,2.8,2.8,2025-05-25
+Pune,EV Charging Stations,In Progress,3.2,4.0,2026-04-15
+Mumbai,Flyover at Andheri,Delayed,6.8,10.0,2027-03-10
+Nagpur,Public Health Surveillance,In Progress,2.9,3.5,2026-11-25
+Aurangabad,Central Library Upgrade,Completed,1.4,1.4,2025-08-30
+Nashik,Metro Feeder Buses,In Progress,2.7,3.5,2026-02-20
+Thane,Smart Energy Grid,Delayed,4.5,5.5,2026-12-05
+Solapur,City Wi-Fi Network,Completed,0.9,0.9,2025-07-12
+Kolhapur,Water Harvesting Project,In Progress,1.8,2.5,2026-01-15
+Pune,Public Bicycle Sharing,In Progress,2.4,3.0,2026-05-30
+Mumbai,Coastal Protection Wall,Delayed,11.5,15.0,2026-09-20
+Nagpur,Urban Green Spaces,Completed,3.2,3.2,2025-10-05
+Aurangabad,Tech Innovation Hub,In Progress,9.1,12.0,2026-11-15
+Nashik,Water Supply Network,In Progress,7.5,10.0,2026-04-10
+Thane,Public Safety System,Completed,2.3,2.3,2025-06-18

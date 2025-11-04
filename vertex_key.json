@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "smartgovai-gcp",
+  "private_key_id": "eeb49e438f44d5f7bb48acad137c00dc9c5b6b27",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDs9pO8HXKvYN64\n20HF9jlwtkXKjM2i+hvukjG04ssLAm4mtNfTwK0Q93d/OxoPdJDxc2bRVHcLcKlV\nk1fd2yTqMj5fZKO2E1NFTgJLfyfPEJTUL9BPOMqkHmi0KehkPZcUqaKidNIFmw/S\n7HofQ80sjP1p72vK4QY+E3n20p5Te6cEwgxia4nUFrpcpOOiIRbAqoz1mDPeho9e\ngPYEK+ZA4Fz+VK2yZUpg2CqWSEBmcrKRJtLH0uoK/w4BD0jbnyuF/eWg2Ik0j8H1\nmaEschctr9qvZ54Z2m7+IDPh42Kjx2Rx19azaug15vnfudZB7d75nKwihWuHi9Gq\nsSCV0tx1AgMBAAECggEAaHrP6MGTL4Cmsxr5hS9rZCb53rT2dkWQyz/qarcUj2Yi\n6y4Re2wY4sI6Df8hHm9m+Q7I5sM3OfQStYih1VAqlphQp/7XsBAVRxl+KYuHIeVN\nucDbOBLyRiqiP826iXgehR3Gd5rKf24/K+DYd7CNZndDxNGr1WgiOHyd6hYzeNrT\nNrmwd1Hn2TgZfXwZknBMzTQoWnFraSvLLuGs1MJIeLWz0U0DTKb+yEzthJlWLDYf\ngIZ5XArVt3yZZPGVAYtgwGQgfshQTUXtu7kBqcXVQ5cmN+Kmb4szUiihXVD+/Cqz\nXfqOiQ7jWWBGTVgKlWvw0nJAX/F5JqgH/IWePYLCgQKBgQD3v1hi+OGyX1YFR3lk\nw3QJKEdS+dzjlhLsb/lZ3XFEMD4bbQxxBNMds2OviY15pQfeidxEpcGgKLQmcphs\nquKwyfFYkGBtBUkjdCnADUog7l6llFfAzc9XxItPnmPy9bkOKcSxhPYojAwqkNGY\n/4YapxLyFDRy47scTqzCTxdkgwKBgQD020UG0P6mmHliHBDtBbYhvu9eJFPI0XW5\nYBld3bxbzS1X5uRDQS7ZMXZFmLe0R2dSjVVh4obIlm+cIclpfLXwSFaJWmJuNVDe\nj9X2XArFHlJBKbmyCz/L1mSGFtNihbaZHEriPlrXHuhrreToqEP9moUGJ/TlJe5Y\nnWKJVyqZpwKBgQDxXNFXWvFHPeooKoHx0Rly8nLKO/MfJk45Wr2q9zoqHHXlck/0\nq6aiAOrVUUUrhcQs4lJd7r68sesQqgQlmjZP1e3zQnUuwT+H8tvZ5xiZDKHY3rS/\necLO1wSCBOWLBinLypV9/PN0fTw9G+mXDRoxTSQAA/81Dvhzk5Jrm3JG0QKBgGAu\nDUQrLgwkknGOUru35Z4F0SKqpFqapGKHtA8h/U4WHzyLDpi4bv2Tp0CZR3fCIHzV\n1XcYsxbxuK+cue/8s77Ju2xCm61stfJmj4YxC234hhjgmfes4YdhFKVzK99kZKBp\n86RBGA+uLV+2s9cL2YExhBUx9slYB/K5B66pFau7AoGAe1fhDjbm5H3QlGJolRs3\n2uDpI6t1pq1sVWS0wnIzkPgwdIXCA9GINTWekPRoWHa10L6mtJLG4EaAchGXSiZZ\nz08sAbfa/xSKm6nMZOd4eY/dqJ6Dy2Vc9vRV8qUQrBUPtIW6W8ZjEBoE0Yio12tv\nORV51OVfS8/BtMQF53DPqV8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "vertexai-access@smartgovai-gcp.iam.gserviceaccount.com",
+  "client_id": "100624592876559036250",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vertexai-access%40smartgovai-gcp.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
