@@ -163,9 +163,9 @@ Dashboard	Insights	Feedback
 
 Mohan Prudhviraj
 💼 AI Developer | Data Scientist | Full-Stack Enthusiast
-📧 [your.email@example.com
+📧 [prudhvirajsuthapalli@gmail.com
 ]
-🔗 LinkedIn Profile
+🔗 LinkedIn Profile : https://www.linkedin.com/in/prudhvirajsuthapalli/
 
 🏁 Future Enhancements
 
