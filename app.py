@@ -147,37 +147,6 @@ if uploaded_file:
         )
 
         # --- AI Summaries ---
-        '''if use_ai:
-            st.subheader("🧠 AI-Generated Executive Summary")
-            summary_text = None
-            if use_vertex_gemini:
-                st.info("Using Vertex Gemini model for summary (Gemini-1.5-flash)")
-                summary_text = generate_ai_summary(df)
-            else:
-                openai_key = st.secrets.get("OPENAI_API_KEY", None) if hasattr(st, "secrets") else os.getenv("OPENAI_API_KEY")
-                if openai_key:
-                    client = OpenAI(api_key=openai_key)
-                    sample_rows = df[['date','region','category','description_anonymized']].head(10).to_string(index=False)
-                    prompt = f"You are an assistant. Produce a concise executive summary (4-6 sentences) for municipal decision-makers based on these sample records:\n\n{sample_rows}"
-                    try:
-                        response = client.chat.completions.create(
-                            model="gpt-4o-mini",  # Or gpt-3.5-turbo if preferred
-                            messages=[{"role": "user", "content": prompt}],
-                            max_tokens=200
-                        )
-                        summary_text = response.choices[0].message.content
-                    except Exception as e:
-                        summary_text = f"OpenAI error: {e}"
-                else:
-                    summary_text = None
-
-            if summary_text is None or summary_text.startswith("OpenAI error"):
-                st.warning("AI service failed or API key is unavailable; using backup local summary.")
-                summary_text = generate_backup_summary(df)
-
-            st.write(summary_text)
-        else:
-            st.info("AI summaries disabled.")'''
         # --- AI Summaries ---
         if use_ai:
             st.subheader("🧠 AI-Generated Executive Summary")
