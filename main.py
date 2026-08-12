@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from utils.data_cleaning import basic_clean, aggregate_counts
 from models.predictor import SimpleTrendPredictor
 from utils.prioritizer import compute_urgency
+from utils.backup_ai import generate_backup_summary
 from vertexai.preview.generative_models import GenerativeModel
 import vertexai, os
 from openai import OpenAI
@@ -83,12 +84,19 @@ def get_predictions():
         data = json.load(f)
     return {"predictions": data}
 
+
+def load_csv_from_upload(file: UploadFile):
+    try:
+        return pd.read_csv(file.file)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Invalid CSV upload: {e}")
+
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     """
     Simplified prediction endpoint without saving results.
     """
-    df = pd.read_csv(file.file)
+    df = load_csv_from_upload(file)
     df = basic_clean(df)
     agg = aggregate_counts(df)
     predictor = SimpleTrendPredictor()
@@ -127,13 +135,15 @@ async def ai_summary(file: UploadFile = File(...), model_type: str = "gemini"):
             response = model.generate_content(prompt)
             return {"summary": response.text}
 
-        except Exception as e:
-            return {"error": str(e)}
+        except Exception:
+            backup = generate_backup_summary(df)
+            return {"summary": backup, "fallback": True}
 
     else:  # OpenAI fallback
         key = os.getenv("OPENAI_API_KEY")
         if not key:
-            return {"error": "OpenAI key not found"}
+            backup = generate_backup_summary(df)
+            return {"summary": backup, "fallback": True}
 
         client = OpenAI(api_key=key)
         prompt = f"Summarize this citizen service dataset:\n{sample}"
@@ -145,20 +155,24 @@ async def ai_summary(file: UploadFile = File(...), model_type: str = "gemini"):
                 max_tokens=250,
             )
             return {"summary": response.choices[0].message.content}
-        except Exception as e:
-            return {"error": str(e)}
+        except Exception:
+            backup = generate_backup_summary(df)
+            return {"summary": backup, "fallback": True}
 
 @app.post("/summary")
 async def summary(file: UploadFile = File(...)):
     """
     Simpler Gemini-based summary endpoint for testing.
     """
-    df = pd.read_csv(file.file)
-    vertexai.init(project="smartgovai-gcp", location="asia-south1")
-    model = GenerativeModel("gemini-1.5-flash")
-    prompt = f"Summarize the key citizen service patterns:\n{df.head(10).to_string()}"
-    response = model.generate_content(prompt)
-    return {"summary": response.text}
+    df = load_csv_from_upload(file)
+    try:
+        vertexai.init(project="smartgovai-gcp", location="asia-south1")
+        model = GenerativeModel("gemini-1.5-flash")
+        prompt = f"Summarize the key citizen service patterns:\n{df.head(10).to_string()}"
+        response = model.generate_content(prompt)
+        return {"summary": response.text}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"AI summary generation failed: {e}")
 
 # ============================================================
 # URGENCY CALCULATION
@@ -213,12 +227,39 @@ def get_urgency(weights: dict = Body(...)):
 
 @app.post("/prioritize")
 async def prioritize(file: UploadFile = File(...)):
-    df = pd.read_csv(file.file)
+    df = load_csv_from_upload(file)
     df = basic_clean(df)
-    urgency_scores = compute_urgency(df)
-    df["urgency_score"] = urgency_scores
-    prioritized_df = df.sort_values(by="urgency_score", ascending=False)
-    return prioritized_df.to_dict(orient="records")
+
+    if 'date' not in df.columns or df['date'].isna().all():
+        raise HTTPException(status_code=400, detail="File must contain a valid 'date' column for prioritization.")
+
+    agg = aggregate_counts(df, freq='W', date_col='date')
+    predictor = SimpleTrendPredictor()
+    predictor.fit(agg)
+    preds = predictor.predict_next_period(agg)
+
+    recent = (
+        agg.sort_values('period_start')
+        .groupby(['region', 'category'], as_index=False)
+        .tail(1)
+        .rename(columns={'count': 'last_count'})
+    )
+
+    combined = recent.merge(preds, on=['region', 'category'], how='inner')
+    combined['delta'] = combined['predicted_count'] - combined['last_count']
+    combined['risk_score'] = np.clip(combined['delta'] / (combined['last_count'] + 1), 0, 1)
+    combined['resource_availability'] = np.random.rand(len(combined))
+    combined['urgency_score'] = combined.apply(
+        lambda r: compute_urgency(
+            r['risk_score'],
+            r['delta'] / (r['last_count'] + 1),
+            r['resource_availability'],
+        ),
+        axis=1,
+    )
+
+    prioritized_df = combined.sort_values(by='urgency_score', ascending=False)
+    return prioritized_df.to_dict(orient='records')
 
 # ============================================================
 # FEEDBACK + INSIGHTS

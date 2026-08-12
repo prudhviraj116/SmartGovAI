@@ -6,6 +6,7 @@ import os, json
 from utils.data_cleaning import basic_clean, aggregate_counts
 from models.predictor import SimpleTrendPredictor
 from utils.prioritizer import compute_urgency
+from utils.backup_ai import generate_backup_summary
 
 # --- OpenAI SDK ---
 from openai import OpenAI
@@ -137,10 +138,10 @@ if uploaded_file:
         # --- AI Summaries ---
         if use_ai:
             st.subheader("🧠 AI-Generated Executive Summary")
+            summary_text = None
             if use_vertex_gemini:
                 st.info("Using Vertex Gemini model for summary (Gemini-1.5-flash)")
-                summary = generate_ai_summary(df)
-                st.write(summary)
+                summary_text = generate_ai_summary(df)
             else:
                 openai_key = st.secrets.get("OPENAI_API_KEY", None) if hasattr(st, "secrets") else os.getenv("OPENAI_API_KEY")
                 if openai_key:
@@ -153,18 +154,25 @@ if uploaded_file:
                             messages=[{"role": "user", "content": prompt}],
                             max_tokens=200
                         )
-                        st.info(response.choices[0].message.content)
+                        summary_text = response.choices[0].message.content
                     except Exception as e:
-                        st.error(f"OpenAI error: {e}")
+                        summary_text = f"OpenAI error: {e}"
                 else:
-                    st.warning("No OpenAI key found. Set OPENAI_API_KEY in Streamlit secrets or environment to enable AI summaries.")
+                    summary_text = None
+
+            if summary_text is None or summary_text.startswith("OpenAI error"):
+                st.warning("AI service failed or API key is unavailable; using backup local summary.")
+                summary_text = generate_backup_summary(df)
+
+            st.write(summary_text)
         else:
             st.info("AI summaries disabled.")
 
         # --- Export predictions ---
         csv = preds.to_csv(index=False)
         st.download_button("⬇️ Download predictions CSV", data=csv, file_name="smartgovai_predictions.csv", mime="text/csv")
-        # After computing `combined` or `preds`
+        # Save predictions for shared access; ensure target folder exists
+        os.makedirs("shared_data", exist_ok=True)
         combined.to_csv("shared_data/latest_predictions.csv", index=False)
 
 else:
