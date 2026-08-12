@@ -1,182 +1,111 @@
 
-# SmartGovAI — Governance Platform (Prototype)
+# SmartGovAI — AI-Driven Governance & Predictive Analytics Platform
 
-This repository contains a hackathon-ready prototype of SmartGovAI.
-## Quick start
-1. pip install -r requirements.txt
-2. streamlit run app.py
+SmartGovAI is an AI/ML engineering platform designed to transform multi-sectoral public data into predictive, actionable intelligence for government decision-makers. Built with a lightweight Python backend architecture, it forecasts public service demand, prioritizes citizen issues using weighted risk scoring, and generates executive summaries using Google Gemini AI.
 
-🧠 SmartGovAI — AI-Driven Governance Intelligence Platform
-🚀 Transforming Raw Public Data into Predictive, Actionable Insights for Smarter Governance
+---
 
-SmartGovAI is a secure, AI-powered governance platform designed to transform multi-sectoral government data into predictive and actionable intelligence.
-Built with modern AI + cloud technologies, it helps decision-makers predict service demand, prioritize citizen issues, and ensure transparent, data-driven governance.
+## 🌟 Key Features
 
-🌟 Problem Statement
+* **Predictive AI Modeling:** Forecasts complaint volume and service demand for upcoming periods using time-series trend analysis.
+* **Dynamic Prioritization Engine:** Automatically ranks municipal issues by computing an urgency score based on risk, predicted demand delta, and resource availability.
+* **AI-Powered Executive Summaries:** Integrates Google Gemini (`google-generativeai`) to summarize dataset patterns and actionable insights for decision-makers.
+* **Interactive Streamlit UI:** Live data visualization, time-series plotting, and threshold adjustments with immediate fallback to local summary generators.
+* **FastAPI Backend Services:** Modular REST API endpoints for model inference, data ingestion, and batch data cleaning.
 
-Government departments often operate in silos — with huge amounts of untapped public data (health, infrastructure, safety).
-This results in:
+---
 
-Reactive service delivery
+## ⚙️ Tech Stack
 
-Delayed citizen responses
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend / Dashboard** | Streamlit, Plotly Express, Pandas |
+| **Backend / API** | FastAPI, Uvicorn, Pydantic |
+| **ML & AI Engine** | Python, Scikit-learn, NumPy, Google Gemini API (`google-generativeai`) |
+| **Deployment** | Render (FastAPI Web Service), Streamlit Community Cloud (Dashboard UI) |
 
-Poor predictability in public needs
+---
 
-🎯 Objective
+## 🧩 Architecture Flow
 
-Build a data ecosystem that enables:
-
-Proactive governance using predictive AI
-
-Real-time insights for decision-makers
-
-Citizen service triaging before escalation
-
-Full compliance with data privacy & security standards
-
-⚙️ Tech Stack
-Layer	Technology
-Frontend	React.js, Tailwind CSS, Chart.js, Axios
-Backend	FastAPI (or Flask), Python, Pandas, Scikit-learn
-ML / AI	Predictive analytics, Citizen sentiment model
-Data	CSV-based or API-fed datasets
-Deployment	Google Cloud Run (backend), Vercel (frontend)
-Security	Cloud IAM, VPC, OAuth2
-📊 Key Features
-
-✅ Predictive AI Models — Forecast service demand & resource bottlenecks
-✅ Dynamic Prioritization Engine — Automates routing of critical issues
-✅ Citizen Sentiment Insights — Analyzes feedback for real-time governance
-✅ Interactive Dashboards — Visualize KPIs and performance metrics
-✅ Privacy-by-Design — Compliant with data governance policies
-
-🧩 Project Architecture
-Frontend (React + Tailwind + Chart.js)
-        ↓
-API Layer (Axios)
-        ↓
-Backend (FastAPI / Flask)
-        ↓
-ML Model / CSV Data
-        ↓
-Predictions, Insights, Citizen Feedback JSON
-
+```text
+[ Citizen CSV Upload / Data Source ]
+                 │
+                 ▼
+     ┌───────────────────────┐
+     │  Streamlit Dashboard  │ ◄── (Interactive UI / Visualizations)
+     └───────────┬───────────┘
+                 │ (REST API / HTTPS)
+                 ▼
+     ┌───────────────────────┐
+     │    FastAPI Backend    │ ───► Data Cleaning & Anonymization
+     └───────────┬───────────┘
+                 ├───► ML Trend Predictor & Urgency Scoring
+                 └───► Google Gemini API (Executive Summarization)
 📁 Project Structure
+Plaintext
 SmartGovAI/
-│
-├── backend/
-│   ├── main.py
-│   ├── model/
-│   │   └── predictive_model.pkl
-│   ├── data/
-│   │   └── sample_data.csv
-│   ├── requirements.txt
-│   └── Dockerfile
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Sidebar.jsx
-│   │   │   ├── DashboardCard.jsx
-│   │   │   └── ChartCard.jsx
-│   │   ├── pages/
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── Insights.jsx
-│   │   │   └── CitizenFeedback.jsx
-│   │   ├── services/
-│   │   │   └── api.js
-│   │   ├── App.jsx
-│   │   └── index.js
-│   ├── package.json
-│   └── tailwind.config.js
-│
-└── README.md
-
-⚡ Installation & Setup
-1️⃣ Clone Repository
-git clone https://github.com/yourusername/SmartGovAI.git
+├── app.py                     # Streamlit frontend dashboard
+├── main.py                    # FastAPI backend server & API endpoints
+├── requirements.txt           # Python dependencies
+├── .gitignore                 # Git ignore configuration
+├── models/
+│   └── predictor.py           # Trend prediction engine
+├── utils/
+│   ├── data_cleaning.py       # Data cleaning & column normalization
+│   ├── prioritizer.py         # Urgency scoring algorithm
+│   └── backup_ai.py           # Fallback local summary generator
+└── shared_data/               # Storage for generated outputs
+⚡ Quick Start (Local Setup)
+1. Clone Repository
+Bash
+git clone [https://github.com/prudhviraj116/SmartGovAI.git](https://github.com/prudhviraj116/SmartGovAI.git)
 cd SmartGovAI
+2. Set Up Virtual Environment & Dependencies
+PowerShell
+# Create & activate environment
+python -m venv venv
+.\venv\Scripts\Activate.ps1
 
-2️⃣ Backend Setup
-cd backend
+# Install requirements
 pip install -r requirements.txt
-uvicorn main:app --reload
+3. Environment Variables
+Create a .env file in the project root:
 
+Code snippet
+GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+4. Run Services
+Start FastAPI Backend:
 
-Your backend runs at → http://127.0.0.1:8000
+Bash
+uvicorn main:app --reload --port 8000
+API Docs will be live at http://127.0.0.1:8000/docs
 
-3️⃣ Frontend Setup
-cd frontend
-npm install
-npm start
+Start Streamlit Dashboard:
 
+Bash
+streamlit run app.py
+Dashboard will open at http://localhost:8501
 
-Your frontend runs at → http://localhost:3000
+☁️ Live Deployment
+FastAPI Backend Service: Deployed on Render
 
-4️⃣ Connect Backend to Frontend
+https://smartgovai-backend.onrender.com
 
-In /frontend/src/services/api.js, update your deployed backend URL:
+Interactive Frontend: Deployed on Streamlit Community Cloud
 
-const API_BASE = "(https://smartgovai-backend-37023038191.asia-south1.run.app/)";
-
-☁️ Deployment Guide
-🚀 Backend (Google Cloud Run)
-gcloud builds submit --tag gcr.io/<PROJECT_ID>/smartgovai-backend
-gcloud run deploy smartgovai-backend --image gcr.io/<PROJECT_ID>/smartgovai-backend --platform managed --region asia-south1
-
-🌐 Frontend (Vercel)
-
-Push frontend to GitHub
-
-Import project to Vercel
-
-Set API_BASE in environment variables
-
-🧠 Example Dashboard Views
-📊 Dashboard Page
-
-Real-time visualizations of service KPIs
-
-Predictive scores for departments
-
-Department-wise analytics using Chart.js
-
-💡 Insights Page
-
-AI-driven insights and trend forecasting
-
-🗣️ Citizen Feedback Page
-
-Aggregated citizen sentiments and satisfaction metrics
-
-📸 Screenshots
-Dashboard	Insights	Feedback
-
-	
-	
-
-(Add screenshots after testing locally)
+https://smartgovai.streamlit.app
 
 👨‍💻 Author
+S. Prudhviraj
 
-Mohan Prudhviraj
-💼 AI Developer | Data Scientist | Full-Stack Enthusiast
-📧 [prudhvirajsuthapalli@gmail.com
-]
-🔗 LinkedIn Profile : https://www.linkedin.com/in/prudhvirajsuthapalli/
+AI Developer | Full-Stack & Systems Enthusiast
 
-🏁 Future Enhancements
+Email: prudhvirajsuthapalli@gmail.com
 
-Integrate Gemini API for summarizing citizen queries
+GitHub: @prudhviraj116
 
-Implement BigQuery as the backend data warehouse
-
-Add authentication & role-based dashboards
-
-Real-time anomaly detection for governance data
+LinkedIn: linkedin.com/in/prudhvirajsuthapalli
 
 📜 License
-
-MIT License © 2025 — SmartGovAI
+Distributed under the MIT License. See LICENSE for details.
