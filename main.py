@@ -12,6 +12,13 @@ from openai import OpenAI
 from pathlib import Path
 import json
 
+import google.generativeai as genai
+
+# Configure Gemini API key globally
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if GEMINI_API_KEY:
+    genai.configure(api_key=GEMINI_API_KEY)
+
 # ============================================================
 # CONFIGURATION
 # ============================================================

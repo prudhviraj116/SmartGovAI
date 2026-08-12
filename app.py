@@ -8,8 +8,19 @@ from models.predictor import SimpleTrendPredictor
 from utils.prioritizer import compute_urgency
 from utils.backup_ai import generate_backup_summary
 
+# Uses local FastAPI if running locally, or Render URL when deployed
+BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
+
+# --- Google Generative AI (Gemini Key Integration) ---
+import google.generativeai as genai
+
+GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", None) if hasattr(st, "secrets") else os.getenv("GEMINI_API_KEY")
+if GEMINI_API_KEY:
+    genai.configure(api_key=GEMINI_API_KEY)
+
 # --- OpenAI SDK ---
 from openai import OpenAI
+
 
 # --- Vertex AI Gemini Integration ---
 from vertexai.preview.generative_models import GenerativeModel
