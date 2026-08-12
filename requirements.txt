@@ -5,6 +5,7 @@ matplotlib
 vertexai
 scikit-learn
 openai
+google-generativeai
 google-cloud-aiplatform
 numpy
 python-dotenv
