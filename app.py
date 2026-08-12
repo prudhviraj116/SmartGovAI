@@ -147,7 +147,7 @@ if uploaded_file:
         )
 
         # --- AI Summaries ---
-        if use_ai:
+        '''if use_ai:
             st.subheader("🧠 AI-Generated Executive Summary")
             summary_text = None
             if use_vertex_gemini:
@@ -172,6 +172,36 @@ if uploaded_file:
                     summary_text = None
 
             if summary_text is None or summary_text.startswith("OpenAI error"):
+                st.warning("AI service failed or API key is unavailable; using backup local summary.")
+                summary_text = generate_backup_summary(df)
+
+            st.write(summary_text)
+        else:
+            st.info("AI summaries disabled.")'''
+        # --- AI Summaries ---
+        if use_ai:
+            st.subheader("🧠 AI-Generated Executive Summary")
+            summary_text = None
+            
+            # Check for configured Gemini API Key
+            if GEMINI_API_KEY:
+                try:
+                    model = genai.GenerativeModel("gemini-1.5-flash")
+                    sample_rows = df[['date','region','category','description_anonymized']].head(10).to_string(index=False) if 'description_anonymized' in df.columns else df.head(10).to_string()
+                    
+                    prompt = f"""
+                    You are analyzing a citizen service dataset for municipal decision-makers.
+                    Produce a concise executive summary highlighting top complaint categories, regions, and action items:
+                    {sample_rows}
+                    """
+                    response = model.generate_content(prompt)
+                    summary_text = response.text
+                except Exception as e:
+                    st.error(f"Gemini API Error: {e}")
+                    summary_text = None
+
+            # Fallback if Gemini fails or Key is absent
+            if summary_text is None:
                 st.warning("AI service failed or API key is unavailable; using backup local summary.")
                 summary_text = generate_backup_summary(df)
 
